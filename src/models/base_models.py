@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-
 class SupervisedModel(ABC):
     """
     This is an abstract class for implementing classification models following a sklearn-like implementation
@@ -58,4 +57,7 @@ class SupervisedModel(ABC):
         y: numpy.array, an (m) array containing the class predicted for each datapoint in X
         """
         # This method should call step_predict
+        pass
+
+    def _pdf(self, class_idx, x):
         pass
