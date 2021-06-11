@@ -5,8 +5,8 @@ import pandas as pd
 
 from src.models.NBClassifier import NBClassifier
 
-"""
-# Test to correct funtioning
+
+# Test to correct functioning
 
 def accuracy(y_true, y_pred):
     accuracy_num = np.sum(y_true == y_pred) / len(y_true)
@@ -24,7 +24,6 @@ predictions = nb.predict(X_test)
 print("Naive Bayes classification accuracy", accuracy(y_test, predictions))
 
 """
-
 # Test with data base with medicine
 
 df = pd.read_csv("test.csv" )
@@ -38,4 +37,4 @@ nb.fit(X_train, y_train.astype(int))
 prediction = nb.predict(X_test)
 
 print("The answers to your entered characteristics is:", prediction)
-
+"""
