@@ -5,7 +5,7 @@ import pandas as pd
 
 from src.models.NBClassifier import NBClassifier
 
-
+"""
 # Test to correct funtioning
 
 def accuracy(y_true, y_pred):
@@ -37,4 +37,4 @@ nb.fit(X_train, y_train.astype(int))
 prediction = nb.predict(X_test)
 
 print("The answers to your entered characteristics is:", prediction)
-"""
+

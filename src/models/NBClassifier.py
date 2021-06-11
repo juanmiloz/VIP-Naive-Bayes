@@ -14,14 +14,14 @@ class NBClassifier():
 
         # np.float64 same float but an accurate representation of the values
         # np.zeros creates an array of (n,m) size, and typenp.float64 and fills it with zeros
-        self._mean = np.zeros((num_classes,num_features), dtype=np.float64)
+        self._mean = np.zeros((num_classes, num_features), dtype=np.float64)
         self._var = np.zeros((num_classes, num_features), dtype=np.float64)
-        self._priors = np.zeros(num_classes,dtype=np.float64)
+        self._priors = np.zeros(num_classes, dtype=np.float64)
 
         for i in self._classes:
-            X_i = X[i==y]
-            self._mean[i,:] = X_i.mean(axis=0)
-            self._var[i,:] = X_i.var(axis=0)
+            X_i = X[i == y]
+            self._mean[i, :] = X_i.mean(axis=0)
+            self._var[i, :] = X_i.var(axis=0)
             self._priors[i] = X_i.shape[0] / float(num_samples)
 
     def predict(self, X):
